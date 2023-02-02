@@ -211,8 +211,7 @@ class CarInterface(CarInterfaceBase):
     elif candidate == CAR.SOUL_EV_SK3:
       ret.wheelbase = 2.6
       ret.steerRatio = 13.7  # average of the platforms
-      #ret.mass = 1695. + STD_CARGO_KG
-      ret.mass = 1375. + STD_CARGO_KG
+      ret.mass = 1695. + STD_CARGO_KG
       
     # Genesis
     elif candidate == CAR.GENESIS_GV60_EV_1ST_GEN:
