@@ -208,7 +208,12 @@ class CarInterface(CarInterfaceBase):
         ret.mass = 3957 * CV.LB_TO_KG + STD_CARGO_KG
       else:
         ret.mass = 4537 * CV.LB_TO_KG + STD_CARGO_KG
-
+    elif candidate == CAR.SOUL_EV_SK3:
+      ret.wheelbase = 2.81
+      ret.steerRatio = 13.5  # average of the platforms
+      ret.mass = 1695. + STD_CARGO_KG
+      ret.wheelbase = 2.6
+      
     # Genesis
     elif candidate == CAR.GENESIS_GV60_EV_1ST_GEN:
       ret.mass = 2205 + STD_CARGO_KG
