@@ -13,6 +13,8 @@ from system.swaglog import cloudlog
 import cereal.messaging as messaging
 from selfdrive.car import gen_empty_fingerprint
 
+from selfdrive.car.hyundai.values import CAR
+
 EventName = car.CarEvent.EventName
 
 
@@ -176,7 +178,8 @@ def get_car(logcan, sendcan, experimental_long_allowed, num_pandas=1):
   if candidate is None:
     cloudlog.warning("car doesn't match any fingerprints: %r", fingerprints)
     candidate = "mock"
-
+    candidate = CAR.SOUL_EV_SK3
+    
   selected_car = Params().get("SelectedCar")
   if selected_car:
     candidate = selected_car.decode("utf-8")
